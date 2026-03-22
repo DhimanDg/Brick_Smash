@@ -1,0 +1,57 @@
+#Kivy version unspecified!!!
+
+
+<Ball>:
+    size: 50, 50
+    canvas: 
+        Color: 
+            rgba: self.color
+
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+
+<Paddle>:
+    size: 250, 20
+    canvas:
+        Color:
+            rgba: self.color
+
+
+        RoundedRectangle:
+
+            pos: self.pos
+            size: self.size
+            radius: [15]
+
+
+
+<BrickGame>:
+    ball: _ball
+    player: player_
+
+
+
+    canvas:
+        Color:
+            rgba: self.color
+
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "img.jpg"
+
+
+    Ball:
+        id: _ball
+        center: self.parent.center
+        color: 0, 0, 0, 1
+
+
+    Paddle:
+        id: player_
+        y: root.y
+        center_x: root.center_x
+        color: 255, 0, 0
+
