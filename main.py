@@ -11,7 +11,7 @@ from kivy.core.audio import SoundLoader
 
 
 class Ball(Widget):
-    color = ColorProperty((1,1,1,1)) #set to white for now
+    color = ColorProperty((0,0,0,0)) #set to white for now
 
 
 
